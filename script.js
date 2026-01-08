@@ -78,3 +78,28 @@ for (let i = 0; i < eleves.length; i++) {
 }
 
 //partie six//
+
+for (let i = 0; i < eleves.length; i++) {
+//tester les conditions et les comparer//
+  switch (true) {
+    case eleves[i].moyenne >= 16:
+      console.log(eleves[i].prenom, "- Mention : Très bien");
+      break;
+
+    case eleves[i].moyenne >= 14:
+      console.log(eleves[i].prenom, "- Mention : Bien");
+      break;
+
+    case eleves[i].moyenne >= 12:
+      console.log(eleves[i].prenom, "- Mention : Assez bien");
+      break;
+
+    case eleves[i].moyenne >= 10:
+      console.log(eleves[i].prenom, "- Mention : Passable");
+      break;
+
+//si auccune conditions n'est remplies il sera considerais comme cas par default//
+    default:
+      console.log(eleves[i].prenom, "- Mention : Insuffisant");
+  }
+}
