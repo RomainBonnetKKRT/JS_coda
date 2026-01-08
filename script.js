@@ -55,3 +55,13 @@ for (let i = 0; i < eleves.length; i++) {
     eleves[i].moyenne
   );
 }
+
+//partie cinque//
+
+for (let i = 0; i < eleves.length; i++) {
+  if (eleves[i].moyenne >= 10) {
+    console.log(eleves[i].prenom, ": Admis");
+  } else {
+    console.log(eleves[i].prenom, ": Refusé");
+  }
+}
