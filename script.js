@@ -122,3 +122,36 @@ while (compteur < eleves.length) {
 
 //affiche le nombre d'élève total admis//
 console.log("Nombre d'élèves admis :", admis);
+
+//partie BONUS//
+
+//Moyenne de la classe//
+let somme_moyennes = 0;
+
+for (let i = 0; i < eleves.length; i++) {
+  somme_moyennes += eleves[i].moyenne;
+}
+
+let moyenne_classe = somme_moyennes / eleves.length;
+console.log("Moyenne de la classe :", moyenne_classe);
+
+
+//Ajout d'un nouvel élève//
+eleves.push({
+  prenom: "Lina",
+  note_maths: 15,
+  note_francais: 14
+});
+
+nombre_eleves = eleves.length;
+console.log("Nouveau nombre d'élèves :", nombre_eleves);
+
+//affiche le nombre d'élève total admis//
+console.log("Nombre d'élèves admis :", admis);
+
+//Résultat de l'admissions ou non//
+if (admis === eleves.length) {
+  console.log("Félicitations ! Tous les élèves sont admis 🎉");
+} else {
+  console.log("Tous les élèves ne sont pas admis.");
+}
