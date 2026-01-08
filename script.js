@@ -42,3 +42,16 @@ let eleves = [
 for (let i = 0; i < eleves.length; i++) {
   console.log("Élève :", eleves[i].prenom);
 }
+
+//Partie quatre//
+
+for (let i = 0; i < eleves.length; i++) {
+  eleves[i].moyenne =
+    (eleves[i].note_maths + eleves[i].note_francais) / 2;
+
+  console.log(
+    eleves[i].prenom,
+    "- Moyenne :",
+    eleves[i].moyenne
+  );
+}
