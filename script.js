@@ -103,3 +103,22 @@ for (let i = 0; i < eleves.length; i++) {
       console.log(eleves[i].prenom, "- Mention : Insuffisant");
   }
 }
+
+//partie sept//
+
+let compteur = 0;
+let admis = 0;
+
+
+//boucle pour acceder à chaque élèves//
+while (compteur < eleves.length) {
+
+//ajoute un au compteur dès qu'un élève a une moyenne =>10//
+  if (eleves[compteur].moyenne >= 10) {
+    admis++;
+  }
+  compteur++;
+}
+
+//affiche le nombre d'élève total admis//
+console.log("Nombre d'élèves admis :", admis);
