@@ -52,3 +52,23 @@ notes[0] = notes[indiceMin];
 notes[indiceMin] = temp;
 
 console.log("Tableau après le premier échange :", notes);
+
+//Partie_quatre//
+
+let nbEchanges = 0;
+let nbVerifications = 0;
+
+for (let i = 0; i < notes.length - 1; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < notes.length; j++) {
+        nbVerifications++;
+        if (notes[j] < notes[minIndex]) minIndex = j;
+    }
+
+    if (minIndex !== i) {
+        [notes[i], notes[minIndex]] = [notes[minIndex], notes[i]]; // échange moderne
+        nbEchanges++;
+        console.log(`Échange étape ${i} :`, notes);
+    }
+}
