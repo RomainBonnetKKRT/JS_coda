@@ -44,3 +44,11 @@ for (let i = 1; i < notes.length; i++) {
 }
 
 console.log(`Plus petite valeur trouvée : ${notes[indiceMin]} à l'indice ${indiceMin}`);
+
+//Partie_trois//
+
+let temp = notes[0];
+notes[0] = notes[indiceMin];
+notes[indiceMin] = temp;
+
+console.log("Tableau après le premier échange :", notes);
