@@ -34,3 +34,13 @@ for (let i = 1; i < notes.length; i++) {
 
 console.log("Plus petite valeur :", minVal);
 console.log("Plus grande valeur :", maxVal);
+
+//Partie_deux//
+
+let indiceMin = 0;
+
+for (let i = 1; i < notes.length; i++) {
+    if (notes[i] < notes[indiceMin]) indiceMin = i;
+}
+
+console.log(`Plus petite valeur trouvée : ${notes[indiceMin]} à l'indice ${indiceMin}`);
