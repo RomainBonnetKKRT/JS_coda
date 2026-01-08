@@ -19,3 +19,18 @@ for (let i = 0; i < taille; i++) {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+
+//Partie_une//
+
+console.log(notes);
+
+let minVal = notes[0];
+let maxVal = notes[0];
+
+for (let i = 1; i < notes.length; i++) {
+    if (notes[i] < minVal) minVal = notes[i];
+    if (notes[i] > maxVal) maxVal = notes[i];
+}
+
+console.log("Plus petite valeur :", minVal);
+console.log("Plus grande valeur :", maxVal);
