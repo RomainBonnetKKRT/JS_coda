@@ -21,8 +21,11 @@ for (let i = 0; i < taille; i++) {
 ///////////////////////////////////////////////////////////////////////////////
 
 //Partie_une//
-
-console.log(notes);
+stockage_notes = []
+for(i=0 ; i < notes.length ; i++){
+    stockage_notes.push(notes[i]);
+}
+console.log(stockage_notes)
 
 let minVal = notes[0];
 let maxVal = notes[0];
@@ -55,6 +58,8 @@ console.log("Tableau après le premier échange :", notes);
 
 //Partie_quatre//
 
+console.log("=== Tri par ordre croissant ===");
+
 let nbEchanges = 0;
 let nbVerifications = 0;
 
@@ -72,3 +77,38 @@ for (let i = 0; i < notes.length - 1; i++) {
         console.log(`Échange étape ${i} :`, notes);
     }
 }
+
+//Parties cinq//
+
+console.log("tableau avant le tri: ", stockage_notes);
+
+
+// Afficher le tableau avant le tri complet
+console.log("Tableau apres le tri :", notes);
+console.log("Nombre d'échanges :", nbEchanges);
+console.log("Nombre de vérifications :", nbVerifications);
+
+// Tri par sélection complet (simple, sans suivi étape par étape pour la Partie 5)
+console.log("=== Tri par ordre décroissant ===");
+
+let nbEchanges_d = 0;
+let nbVerifications_d = 0;
+
+for (let i = 0; i < notes.length - 1; i++) {
+    let minIndex = i;
+
+    for (let j = i + 1; j < notes.length; j++) {
+        nbVerifications_d++;
+        if (notes[j] > notes[minIndex]) minIndex = j;
+    }
+
+    if (minIndex !== i) {
+        [notes[i], notes[minIndex]] = [notes[minIndex], notes[i]]; // échange moderne
+        nbEchanges_d++;
+        console.log(`Échange étape ${i} :`, notes);
+    }
+}
+
+console.log("Tableau apres le tri :", notes);
+console.log("Nombre d'échanges :", nbEchanges_d);
+console.log("Nombre de vérifications :", nbVerifications_d);
