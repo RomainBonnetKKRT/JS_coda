@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arena – Portail</title>
+    <link rel="stylesheet" href="portail.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<section class="card">
+    <h1 class="title">JS Arena</h1>
+
+    <div class="field">
+        <label>Pseudo</label>
+        <input type="text" id="pseudo" placeholder="Entre ton pseudo">
+    </div>
+
+    <div class="field">
+        <label>Backend</label>
+        <input type="text" id="backend" placeholder="Lien du backend">
+    </div>
+
+    <h2 class="subtitle">Choisis ton skin</h2>
+
+    <div class="skins-wrapper">
+        <div class="skins-container"></div>
+    </div>
+
+    <button class="join-btn" onclick="joinGame()">Rejoindre la partie</button>
+</section>
+
+<script src="portail.js"></script>
+</body>
+</html>
