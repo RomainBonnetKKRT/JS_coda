@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Arena – Lobby</title>
+    <link rel="stylesheet" href="lobby.css">
+</head>
+<body>
+
+<section class="lobby-card">
+    <h1 class="title">Lobby</h1>
+
+    <div class="players-list">
+        <div class="player" data-ready="false">
+            <div class="player-left">
+                <canvas class="player-skin" width="64" height="64"></canvas>
+                <span class="player-name">Player 1</span>
+            </div>
+
+            <button class="ready-btn not-ready">Pas prêt</button>
+        </div>
+    </div>
+
+    <div class="countdown" style="display:none;">
+        La partie démarre dans <span id="timer">3</span>…
+    </div>
+</section>
+
+<script src="lobby.js"></script>
+</body>
+</html>
